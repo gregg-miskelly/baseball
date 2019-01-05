@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BaseballPlayground": {
+      "commandName": "Project",
+      "workingDirectory": "$(SolutionDir)"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.65535.65535.65535
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseballPlayground", "BaseballPlayground\BaseballPlayground.csproj", "{EA89C40E-D9E7-48D0-93EC-D7C5C385C0C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseballParser", "BaseballParser\BaseballParser.csproj", "{7BFE112D-F8A0-4E85-95A4-C2AE12185D99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{52C3BC9F-44E1-4AC1-91D8-820307A9064D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Retrosheet", "Retrosheet", "{31C02A65-25B9-4124-B8A6-27F18084FFEF}"
+	ProjectSection(SolutionItems) = preProject
+		..\Data\Retrosheet\README.md = ..\Data\Retrosheet\README.md
+		..\Data\Retrosheet\retro_id.txt = ..\Data\Retrosheet\retro_id.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameLogs", "GameLogs", "{F3465748-FD39-4E59-8FBD-026163C9CA60}"
+	ProjectSection(SolutionItems) = preProject
+		..\Data\Retrosheet\GameLogs\GameLogColumns.txt = ..\Data\Retrosheet\GameLogs\GameLogColumns.txt
+		..\Data\Retrosheet\GameLogs\GL2018.TXT = ..\Data\Retrosheet\GameLogs\GL2018.TXT
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameEvents", "GameEvents", "{1A6F8A14-FB19-40C1-B7DA-F5FA14A88A55}"
+	ProjectSection(SolutionItems) = preProject
+		..\Data\Retrosheet\GameEvents\2018ANA.EVA = ..\Data\Retrosheet\GameEvents\2018ANA.EVA
+		..\Data\Retrosheet\GameEvents\2018ARI.EVN = ..\Data\Retrosheet\GameEvents\2018ARI.EVN
+		..\Data\Retrosheet\GameEvents\2018ATL.EVN = ..\Data\Retrosheet\GameEvents\2018ATL.EVN
+		..\Data\Retrosheet\GameEvents\2018BAL.EVA = ..\Data\Retrosheet\GameEvents\2018BAL.EVA
+		..\Data\Retrosheet\GameEvents\2018BOS.EVA = ..\Data\Retrosheet\GameEvents\2018BOS.EVA
+		..\Data\Retrosheet\GameEvents\2018CHA.EVA = ..\Data\Retrosheet\GameEvents\2018CHA.EVA
+		..\Data\Retrosheet\GameEvents\2018CHN.EVN = ..\Data\Retrosheet\GameEvents\2018CHN.EVN
+		..\Data\Retrosheet\GameEvents\2018CIN.EVN = ..\Data\Retrosheet\GameEvents\2018CIN.EVN
+		..\Data\Retrosheet\GameEvents\2018CLE.EVA = ..\Data\Retrosheet\GameEvents\2018CLE.EVA
+		..\Data\Retrosheet\GameEvents\2018COL.EVN = ..\Data\Retrosheet\GameEvents\2018COL.EVN
+		..\Data\Retrosheet\GameEvents\2018DET.EVA = ..\Data\Retrosheet\GameEvents\2018DET.EVA
+		..\Data\Retrosheet\GameEvents\2018HOU.EVA = ..\Data\Retrosheet\GameEvents\2018HOU.EVA
+		..\Data\Retrosheet\GameEvents\2018KCA.EVA = ..\Data\Retrosheet\GameEvents\2018KCA.EVA
+		..\Data\Retrosheet\GameEvents\2018LAN.EVN = ..\Data\Retrosheet\GameEvents\2018LAN.EVN
+		..\Data\Retrosheet\GameEvents\2018MIA.EVN = ..\Data\Retrosheet\GameEvents\2018MIA.EVN
+		..\Data\Retrosheet\GameEvents\2018MIL.EVN = ..\Data\Retrosheet\GameEvents\2018MIL.EVN
+		..\Data\Retrosheet\GameEvents\2018MIN.EVA = ..\Data\Retrosheet\GameEvents\2018MIN.EVA
+		..\Data\Retrosheet\GameEvents\2018NYA.EVA = ..\Data\Retrosheet\GameEvents\2018NYA.EVA
+		..\Data\Retrosheet\GameEvents\2018NYN.EVN = ..\Data\Retrosheet\GameEvents\2018NYN.EVN
+		..\Data\Retrosheet\GameEvents\2018OAK.EVA = ..\Data\Retrosheet\GameEvents\2018OAK.EVA
+		..\Data\Retrosheet\GameEvents\2018PHI.EVN = ..\Data\Retrosheet\GameEvents\2018PHI.EVN
+		..\Data\Retrosheet\GameEvents\2018PIT.EVN = ..\Data\Retrosheet\GameEvents\2018PIT.EVN
+		..\Data\Retrosheet\GameEvents\2018SDN.EVN = ..\Data\Retrosheet\GameEvents\2018SDN.EVN
+		..\Data\Retrosheet\GameEvents\2018SEA.EVA = ..\Data\Retrosheet\GameEvents\2018SEA.EVA
+		..\Data\Retrosheet\GameEvents\2018SFN.EVN = ..\Data\Retrosheet\GameEvents\2018SFN.EVN
+		..\Data\Retrosheet\GameEvents\2018SLN.EVN = ..\Data\Retrosheet\GameEvents\2018SLN.EVN
+		..\Data\Retrosheet\GameEvents\2018TBA.EVA = ..\Data\Retrosheet\GameEvents\2018TBA.EVA
+		..\Data\Retrosheet\GameEvents\2018TEX.EVA = ..\Data\Retrosheet\GameEvents\2018TEX.EVA
+		..\Data\Retrosheet\GameEvents\2018TOR.EVA = ..\Data\Retrosheet\GameEvents\2018TOR.EVA
+		..\Data\Retrosheet\GameEvents\2018WAS.EVN = ..\Data\Retrosheet\GameEvents\2018WAS.EVN
+		..\Data\Retrosheet\GameEvents\ANA2018.ROS = ..\Data\Retrosheet\GameEvents\ANA2018.ROS
+		..\Data\Retrosheet\GameEvents\ARI2018.ROS = ..\Data\Retrosheet\GameEvents\ARI2018.ROS
+		..\Data\Retrosheet\GameEvents\ATL2018.ROS = ..\Data\Retrosheet\GameEvents\ATL2018.ROS
+		..\Data\Retrosheet\GameEvents\BAL2018.ROS = ..\Data\Retrosheet\GameEvents\BAL2018.ROS
+		..\Data\Retrosheet\GameEvents\BOS2018.ROS = ..\Data\Retrosheet\GameEvents\BOS2018.ROS
+		..\Data\Retrosheet\GameEvents\CHA2018.ROS = ..\Data\Retrosheet\GameEvents\CHA2018.ROS
+		..\Data\Retrosheet\GameEvents\CHN2018.ROS = ..\Data\Retrosheet\GameEvents\CHN2018.ROS
+		..\Data\Retrosheet\GameEvents\CIN2018.ROS = ..\Data\Retrosheet\GameEvents\CIN2018.ROS
+		..\Data\Retrosheet\GameEvents\CLE2018.ROS = ..\Data\Retrosheet\GameEvents\CLE2018.ROS
+		..\Data\Retrosheet\GameEvents\COL2018.ROS = ..\Data\Retrosheet\GameEvents\COL2018.ROS
+		..\Data\Retrosheet\GameEvents\DET2018.ROS = ..\Data\Retrosheet\GameEvents\DET2018.ROS
+		..\Data\Retrosheet\GameEvents\GameEventFiles.txt = ..\Data\Retrosheet\GameEvents\GameEventFiles.txt
+		..\Data\Retrosheet\GameEvents\HOU2018.ROS = ..\Data\Retrosheet\GameEvents\HOU2018.ROS
+		..\Data\Retrosheet\GameEvents\KCA2018.ROS = ..\Data\Retrosheet\GameEvents\KCA2018.ROS
+		..\Data\Retrosheet\GameEvents\LAN2018.ROS = ..\Data\Retrosheet\GameEvents\LAN2018.ROS
+		..\Data\Retrosheet\GameEvents\MIA2018.ROS = ..\Data\Retrosheet\GameEvents\MIA2018.ROS
+		..\Data\Retrosheet\GameEvents\MIL2018.ROS = ..\Data\Retrosheet\GameEvents\MIL2018.ROS
+		..\Data\Retrosheet\GameEvents\MIN2018.ROS = ..\Data\Retrosheet\GameEvents\MIN2018.ROS
+		..\Data\Retrosheet\GameEvents\NYA2018.ROS = ..\Data\Retrosheet\GameEvents\NYA2018.ROS
+		..\Data\Retrosheet\GameEvents\NYN2018.ROS = ..\Data\Retrosheet\GameEvents\NYN2018.ROS
+		..\Data\Retrosheet\GameEvents\OAK2018.ROS = ..\Data\Retrosheet\GameEvents\OAK2018.ROS
+		..\Data\Retrosheet\GameEvents\PHI2018.ROS = ..\Data\Retrosheet\GameEvents\PHI2018.ROS
+		..\Data\Retrosheet\GameEvents\PIT2018.ROS = ..\Data\Retrosheet\GameEvents\PIT2018.ROS
+		..\Data\Retrosheet\GameEvents\SDN2018.ROS = ..\Data\Retrosheet\GameEvents\SDN2018.ROS
+		..\Data\Retrosheet\GameEvents\SEA2018.ROS = ..\Data\Retrosheet\GameEvents\SEA2018.ROS
+		..\Data\Retrosheet\GameEvents\SFN2018.ROS = ..\Data\Retrosheet\GameEvents\SFN2018.ROS
+		..\Data\Retrosheet\GameEvents\SLN2018.ROS = ..\Data\Retrosheet\GameEvents\SLN2018.ROS
+		..\Data\Retrosheet\GameEvents\TBA2018.ROS = ..\Data\Retrosheet\GameEvents\TBA2018.ROS
+		..\Data\Retrosheet\GameEvents\TEAM2018 = ..\Data\Retrosheet\GameEvents\TEAM2018
+		..\Data\Retrosheet\GameEvents\TEX2018.ROS = ..\Data\Retrosheet\GameEvents\TEX2018.ROS
+		..\Data\Retrosheet\GameEvents\TOR2018.ROS = ..\Data\Retrosheet\GameEvents\TOR2018.ROS
+		..\Data\Retrosheet\GameEvents\WAS2018.ROS = ..\Data\Retrosheet\GameEvents\WAS2018.ROS
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{83827092-50CE-42FC-A919-58F8CB7A220D}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitignore = ..\.gitignore
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA89C40E-D9E7-48D0-93EC-D7C5C385C0C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA89C40E-D9E7-48D0-93EC-D7C5C385C0C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA89C40E-D9E7-48D0-93EC-D7C5C385C0C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA89C40E-D9E7-48D0-93EC-D7C5C385C0C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BFE112D-F8A0-4E85-95A4-C2AE12185D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BFE112D-F8A0-4E85-95A4-C2AE12185D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BFE112D-F8A0-4E85-95A4-C2AE12185D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BFE112D-F8A0-4E85-95A4-C2AE12185D99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31C02A65-25B9-4124-B8A6-27F18084FFEF} = {52C3BC9F-44E1-4AC1-91D8-820307A9064D}
+		{F3465748-FD39-4E59-8FBD-026163C9CA60} = {31C02A65-25B9-4124-B8A6-27F18084FFEF}
+		{1A6F8A14-FB19-40C1-B7DA-F5FA14A88A55} = {31C02A65-25B9-4124-B8A6-27F18084FFEF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BCB4036-97DD-4997-B362-D7C500DF227D}
+	EndGlobalSection
+EndGlobal
