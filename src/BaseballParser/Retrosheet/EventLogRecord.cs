@@ -46,6 +46,9 @@ namespace BaseballParser.Retrosheet
     /// </summary>
     public sealed class LineupEventLogRecord : EventLogRecord
     {
+        // Create this delegate once so that the runtime doen't create a new one for each invoke
+        private static Func<string, object, PlayerBase> s_createPlayerObject = CreatePlayerObject;
+
         private CsvLine m_parsedLine;
 
         internal LineupEventLogRecord(EventLogRecordKind recordKind, CsvLine parsedLine) : base(recordKind)
@@ -58,6 +61,16 @@ namespace BaseballParser.Retrosheet
             m_parsedLine = parsedLine;
         }
 
+        public static LineupEventLogRecord TryCast(EventLogRecord record)
+        {
+            if (record.Kind != EventLogRecordKind.StartingLineup && record.Kind != EventLogRecordKind.Substitution)
+            {
+                return null;
+            }
+
+            return (LineupEventLogRecord)record;
+        }
+
         /// <summary>
         /// Retrosheet ID code.
         /// This is unique for each player. This 8 digit code is  
@@ -66,6 +79,29 @@ namespace BaseballParser.Retrosheet
         /// three digit number.
         /// </summary>
         public ReadOnlySpan<char> PlayerId => m_parsedLine.Cells[0].ToSpan(m_parsedLine.Text);
+
+        /// <summary>
+        /// Gets the player object for this record's player id. If the object doesn't exist yet, it is created
+        /// </summary>
+        /// <typeparam name="TPlayer">Type for the client's representation of players</typeparam>
+        /// <returns>The player object</returns>
+        public TPlayer GetPlayerObject<TPlayer>() where TPlayer : PlayerBase
+        {
+            Substring id = m_parsedLine.Cells[0].ToSubstring(m_parsedLine.Text);
+
+            return (TPlayer)AnalysisCollections.CurrentInstance.PlayerMap.GetOrAdd(id, s_createPlayerObject, this);
+        }
+        static private PlayerBase CreatePlayerObject(string id, object context)
+        {
+            PlayerObjectFactory factory = AnalysisCollections.CurrentInstance.PlayerFactory;
+            if (factory == null)
+            {
+                throw new InvalidOperationException("GetPlayerObject cannot be called unless AnalysisCollections.CurrentInstance.PlayerFactory is set.");
+            }
+
+            var @this = (LineupEventLogRecord)context;
+            return factory(id, @this.PlayerName.ToString());
+        }
 
         /// <summary>
         /// The full name of the player

@@ -29,6 +29,11 @@ namespace BaseballParser
             return line.AsSpan(this.StartIndex, this.Length);
         }
 
+        internal Substring ToSubstring(string line)
+        {
+            return new Substring(line, this.StartIndex, this.Length);
+        }
+
         public string ToString(string line)
         {
             return new string(ToSpan(line));
