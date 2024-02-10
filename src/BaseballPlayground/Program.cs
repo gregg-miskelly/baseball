@@ -17,18 +17,20 @@ namespace BaseballPlayground
 
         static void Test(RootDataDirectory directory)
         {
-            AnalysisCollections.CurrentInstance.PlayerFactory = Player.Create;
+            AnalysisCollections.CurrentInstance.PlayerFactory = PitcherStats.Create;
 
             foreach (var game in directory.OpenGameEvents(2018))
             {
                 foreach (EventLogRecord record in game.PlayByPlayRecords)
                 {
+                    // Process any linup records to create objects for all the pitchers
                     var linupRecord = LineupEventLogRecord.TryCast(record);
-                    if (linupRecord != null)
+                    if (linupRecord != null && linupRecord.FieldingPosition == FieldingPosition.Pitcher)
                     {
-                        Player player = linupRecord.GetPlayerObject<Player>();
-                        player.Games++;
+                        linupRecord.GetPlayerObject<PitcherStats>();
                     }
+
+
 
                 }
             }
@@ -37,17 +39,17 @@ namespace BaseballPlayground
         }
     }
 
-    class Player : PlayerBase
+    class PitcherStats : PlayerBase
     {
         public int Games;
 
-        private Player(string id, string name) : base(id: id, name: name)
+        private PitcherStats(string id, string name) : base(id: id, name: name)
         {
         }
 
-        public static Player Create(string id, string name)
+        public static PitcherStats Create(string id, string name)
         {
-            return new Player(id, name);
+            return new PitcherStats(id, name);
         }
     }
 }

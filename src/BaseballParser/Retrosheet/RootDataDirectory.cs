@@ -121,9 +121,26 @@ namespace BaseballParser.Retrosheet
                         case EventLogRecordKind.Play:
                             playByPlayRecords.Add(new PlayEventLogRecord(GetParsedLine(@enum, line)));
                             break;
+                        case EventLogRecordKind.Data:
+                            {
+                                if (!@enum.MoveNext())
+                                {
+                                    throw new InvalidDataException();
+                                }
+
+                                // Verify this is an 'earned run' record
+                                ReadOnlySpan<char> dataKind = @enum.Current.ToSpan(line);
+                                if (!dataKind.Equals("er".AsSpan(), StringComparison.Ordinal))
+                                {
+                                    throw new InvalidDataException();
+                                }
+
+                                playByPlayRecords.Add(new EarnedRunsRecord(GetParsedLine(@enum, line)));
+                            }
+                            break;
+
                         case EventLogRecordKind.Version:
                         case EventLogRecordKind.Commentary:
-                        case EventLogRecordKind.Data:
                         case EventLogRecordKind.BatterAdjustment:
                         case EventLogRecordKind.PitcherAdjustment:
                         case EventLogRecordKind.BattingOrderAdjustment:

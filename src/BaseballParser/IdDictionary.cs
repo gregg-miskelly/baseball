@@ -18,6 +18,20 @@ namespace BaseballParser
         {
         }
 
+        public TValue this[in Substring key]
+        {
+            get
+            {
+                TValue value;
+                if (!TryGet(key, out value))
+                {
+                    throw new KeyNotFoundException();
+                }
+
+                return value;
+            }
+        }
+
         public bool TryGet(in Substring key, out TValue value)
         {
             _valueCreationLock.AcquireReaderLock(-1);

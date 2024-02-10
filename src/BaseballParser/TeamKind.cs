@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BaseballParser.Retrosheet
+namespace BaseballParser
 {
     /// <summary>
     /// Home or visitor team

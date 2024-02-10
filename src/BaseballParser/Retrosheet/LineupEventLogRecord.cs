@@ -88,9 +88,8 @@ namespace BaseballParser.Retrosheet
         public int BattingPosition => m_parsedLine.Cells[3].ToInt(m_parsedLine.Text);
 
         /// <summary>
-        /// Starting fielding position. The numbers are the standard notation, with designated
-        /// hitters being identified as position 10.  
+        /// Fielding position for the player
         /// </summary>
-        public int FieldingPosition => m_parsedLine.Cells[4].ToInt(m_parsedLine.Text);
+        public FieldingPosition FieldingPosition => (FieldingPosition)m_parsedLine.Cells[4].ToInt(m_parsedLine.Text);
     }
 }
